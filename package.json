@@ -1,0 +1,22 @@
+{
+  "name": "app81",
+  "version": "1.0.0",
+  "description": "This is my app81",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SlobodanSkaric/app81.git"
+  },
+  "keywords": [
+    "app81"
+  ],
+  "author": "SlobodanSkaric <slobodan.skaric@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SlobodanSkaric/app81/issues"
+  },
+  "homepage": "https://github.com/SlobodanSkaric/app81#readme"
+}
