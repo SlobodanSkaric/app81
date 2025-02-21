@@ -1,0 +1,17 @@
+{
+    "name": "schara81/backend",
+    "description": "This my app 81",
+    "type": "projrct",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "SlobodanSkaric",
+            "email": "softverss@gmail.com"
+        }
+    ],
+    "require": {}
+}
