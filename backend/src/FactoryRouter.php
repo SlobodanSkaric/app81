@@ -1,2 +1,0 @@
-<?php 
-//amespace App\
