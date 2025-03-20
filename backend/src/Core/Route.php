@@ -1,6 +1,6 @@
 <?php 
 
-namespace Backend\Src\Core;
+namespace App\Core;
 
 final class Route{
     private string $requestMethod;
@@ -31,11 +31,24 @@ final class Route{
         return boolval(preg_match($this->pattern, $url));
     }
 
-    public function getContrller(){
+    public function getController(){
         return $this->controller;
     }
 
     public function getMethod(){
         return $this->method;
+    }
+
+    public function extractArguments($url){
+        $matches = [];
+        $arguments = [];
+        preg_match_all($this->pattern, $url, $matches);
+
+        if(isset($matches[1])){
+            $arguments = $matches[1];
+        }
+        
+        
+        return  $arguments;
     }
 }
