@@ -40,15 +40,16 @@ final class Route{
     }
 
     public function extractArguments($url){
-        $matches = [];
-        $arguments = [];
-        preg_match_all($this->pattern, $url, $matches);
-
-        if(isset($matches[1])){
-            $arguments = $matches[1];
-        }
+            $matches = [];
+            $arguments = [];
+            preg_match_all($this->pattern, $url, $matches);
+    
+            if(isset($matches[1])){
+                $arguments = $matches[1];
+            }
+            
+            
+            return  $arguments;
         
-        
-        return  $arguments;
     }
 }

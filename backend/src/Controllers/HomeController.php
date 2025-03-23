@@ -1,12 +1,13 @@
 <?php 
 namespace App\Controllers; 
+session_start();
 class HomeController extends Controller{
-    public function getUserUd(int $id){
-        $userModel = new \App\Models\UserModel($this->getDbConnection());
-        $user = $userModel->getUserById($id);
-        return $user;
-    }
-   /*  public function index(){
+    
+
+
+   
+   
+    public function index(){
         $this->set('message', 'Hello world!');
-    } */
+    } 
 }

@@ -28,4 +28,20 @@ class Controller{
     final public function &getData(): array{
         return $this->data;
     }
+
+    public function redirect(string $path, array $data = []){
+        ob_clean();
+        session_start();
+        $_SESSION["data"] = [
+            "messages" => "Login successful",
+            //"role" => $data["role"],
+            "id" => $data["id"],
+            "email" => $data["email"],
+            "phone" => $data["phone"],
+            "name" => $data["name"],
+            "lastname" => $data["lastname"],
+        ];
+        header("Location: app81/".$path);
+        exit;
+    }
 }
