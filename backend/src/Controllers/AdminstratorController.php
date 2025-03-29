@@ -17,6 +17,6 @@ class AdminstratorController extends Controller{
     public function adminLogin(){
         $adminModel = new \App\Models\AdminstratorModel($this->getDbConnection());
         $admin = $adminModel->loginAdminstrator();
-        $this->redirect('/', (array)$admin);
+        $this->redirect('', (array)$admin);
     }
 }

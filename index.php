@@ -2,14 +2,14 @@
 
 use App\Core\Router;
 use App\Core\DatabaseConnection;
-
+require_once "./backend/init.php";
 
 header("Content-Type: application/json");
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-
+//session_destroy();
 
 require __DIR__ . "/backend/vendor/autoload.php";
 

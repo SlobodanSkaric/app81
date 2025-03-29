@@ -30,8 +30,6 @@ class Controller{
     }
 
     public function redirect(string $path, array $data = []){
-        ob_clean();
-        session_start();
         $_SESSION["data"] = [
             "messages" => "Login successful",
             //"role" => $data["role"],

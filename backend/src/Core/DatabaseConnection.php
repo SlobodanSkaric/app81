@@ -1,11 +1,17 @@
 <?php 
 namespace App\Core;
 
+use Dotenv\Dotenv;
+
 class DatabaseConnection{
     private static ?DatabaseConnection $instance = null;    
     private  $connection;
 
+   
     private function __construct(){
+        /* $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/../../");
+        $dotenv->load();
+     */
         $host       = "127.0.0.1";
         $dbname     = "inco81";
         $username   = "root";
