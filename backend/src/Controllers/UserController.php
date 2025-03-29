@@ -22,7 +22,7 @@ class UserController extends Controller{
         $user = $userModel->loginUser();
 
 
-        $this->redirect('/',(array) $user);
+        $this->redirect('',(array) $user);
     }
    
 }
