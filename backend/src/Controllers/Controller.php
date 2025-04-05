@@ -1,7 +1,8 @@
 <?php
 namespace App\Controllers;
+use App\Auths\JWTToken;
 
-class Controller{
+class Controller extends JWTToken{
     private $dbConnection;
     private $data = [];
 
@@ -29,10 +30,9 @@ class Controller{
         return $this->data;
     }
 
-    public function redirect(string $path, array $data = []){
+/*     public function redirect(string $path, array $data = []){
         $_SESSION["data"] = [
             "messages" => "Login successful",
-            //"role" => $data["role"],
             "id" => $data["id"],
             "email" => $data["email"],
             "phone" => $data["phone"],
@@ -41,5 +41,12 @@ class Controller{
         ];
         header("Location: app81/".$path);
         exit;
-    }
+    } 
+
+    public function checkedRole(string $urlRole, string $tokenRole, int $tokenId, int $id){
+        if($urlRole !== $tokenRole || $tokenId !== $id){
+            header("Location: app81/");
+            exit;
+        }
+    }*/
 }

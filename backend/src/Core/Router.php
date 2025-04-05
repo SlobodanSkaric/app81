@@ -15,7 +15,9 @@ class Router{
     public function find(string $method, string $url): ?Route{
         foreach($this->routes as $route){
             if($route->matches($method, $url)){
-                return $route;
+                if($route->checkedPremisinon()){
+                    return $route;
+                }
             };
         }
         return null;

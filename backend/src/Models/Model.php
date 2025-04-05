@@ -1,8 +1,7 @@
 <?php
-
 namespace App\Models;
 
-class Model{
+class Model {
     
     public function getJsonDatas(){
         $jsonData = file_get_contents('php://input');
