@@ -1,5 +1,5 @@
 <?php
-    namespace App\Models;   
+    namespace App\Models;  
 
     class UserModel extends Model{
         private $dbConnection;
@@ -16,6 +16,7 @@
             if($res){
                 $user = $prep->fetch(\PDO::FETCH_OBJ);
             }
+            $user = $this->removePasswordFromData((array)$user);
             return $user;
         }
 
@@ -60,7 +61,7 @@
             }
 
 
-            $password = md5($password);
+            $password = password_hash($password, PASSWORD_BCRYPT);
            
             
             
@@ -107,7 +108,7 @@
                 $user = $prep->fetch(\PDO::FETCH_OBJ);
             }
 
-            IF(!$user){
+            if(!$user){
                 return "User with this email does not exist";
             }
 
